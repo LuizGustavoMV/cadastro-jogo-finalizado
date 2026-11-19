@@ -1,0 +1,208 @@
+/* ==========================================================================
+   Tema Dark Gamer / Loja Digital (Fundo: #0b0f19 e #131a2a | Roxo & Ciano)
+   ========================================================================== */
+
+:root {
+    --bg-main: #0b0f19;
+    --bg-card: #131a2a;
+    --bg-input: #0e1422;
+    --border-subtle: rgba(139, 92, 246, 0.25);
+    --purple-primary: #8b5cf6;
+    --purple-hover: #7c3aed;
+    --cyan-primary: #06b6d4;
+    --cyan-hover: #0891b2;
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    background-image:
+            radial-gradient(circle at 15% 10%, rgba(139, 92, 246, 0.12), transparent 35%),
+            radial-gradient(circle at 85% 20%, rgba(6, 182, 212, 0.10), transparent 35%);
+}
+
+/* Cabeçalho */
+.gamer-navbar {
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border-subtle);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+}
+
+.brand-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--purple-primary), var(--cyan-primary));
+    box-shadow: 0 0 18px rgba(139, 92, 246, 0.45);
+}
+
+.tracking-wide {
+    letter-spacing: 0.04em;
+}
+
+.text-cyan {
+    color: var(--cyan-primary) !important;
+}
+
+.text-purple {
+    color: var(--purple-primary) !important;
+}
+
+.badge-total {
+    background-color: rgba(6, 182, 212, 0.14);
+    color: #67e8f9;
+    border: 1px solid rgba(6, 182, 212, 0.35);
+    font-weight: 500;
+}
+
+/* Abas de Navegação */
+.gamer-tabs .nav-link {
+    background-color: var(--bg-card);
+    color: var(--text-muted);
+    border: 1px solid rgba(148, 163, 184, 0.15);
+    border-radius: 10px;
+    padding: 0.6rem 1.1rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.gamer-tabs .nav-link:hover {
+    color: #ffffff;
+    border-color: var(--cyan-primary);
+}
+
+.gamer-tabs .nav-link.active {
+    background: linear-gradient(135deg, var(--purple-primary), #6d28d9);
+    color: #ffffff;
+    border-color: var(--purple-primary);
+    box-shadow: 0 0 16px rgba(139, 92, 246, 0.4);
+}
+
+/* Painéis e Formulários */
+.gamer-panel {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.gamer-input {
+    background-color: var(--bg-input);
+    border: 1px solid rgba(148, 163, 184, 0.22);
+    color: var(--text-main);
+    border-radius: 8px;
+}
+
+.gamer-input:focus {
+    background-color: var(--bg-input);
+    color: #ffffff;
+    border-color: var(--cyan-primary);
+    box-shadow: 0 0 0 0.2rem rgba(6, 182, 212, 0.22);
+}
+
+.gamer-input::placeholder {
+    color: #64748b;
+}
+
+/* Botões Customizados */
+.btn-purple {
+    background-color: var(--purple-primary);
+    border-color: var(--purple-primary);
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.btn-purple:hover {
+    background-color: var(--purple-hover);
+    border-color: var(--purple-hover);
+    color: #ffffff;
+    box-shadow: 0 0 14px rgba(139, 92, 246, 0.45);
+}
+
+.btn-cyan {
+    background-color: var(--cyan-primary);
+    border-color: var(--cyan-primary);
+    color: #06131c;
+    font-weight: 700;
+}
+
+.btn-cyan:hover {
+    background-color: var(--cyan-hover);
+    border-color: var(--cyan-hover);
+    color: #ffffff;
+    box-shadow: 0 0 14px rgba(6, 182, 212, 0.45);
+}
+
+/* Cards dos Jogos */
+.game-card {
+    background-color: var(--bg-card);
+    border: 1px solid rgba(139, 92, 246, 0.22);
+    border-radius: 14px;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.game-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--purple-primary), var(--cyan-primary));
+}
+
+.game-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--cyan-primary);
+    box-shadow: 0 10px 26px rgba(6, 182, 212, 0.16);
+}
+
+.game-card-highlight {
+    background-color: var(--bg-card);
+    border: 1px solid var(--cyan-primary);
+    border-radius: 14px;
+    box-shadow: 0 0 24px rgba(6, 182, 212, 0.22);
+}
+
+.game-id-pill {
+    font-family: monospace;
+    font-size: 0.82rem;
+    background-color: rgba(15, 23, 42, 0.9);
+    color: #cbd5e1;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+}
+
+/* Badges de Gênero e Plataforma */
+.badge-genero {
+    background-color: rgba(139, 92, 246, 0.18);
+    color: #c4b5fd;
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    font-weight: 500;
+}
+
+.badge-plataforma {
+    background-color: rgba(6, 182, 212, 0.16);
+    color: #67e8f9;
+    border: 1px solid rgba(6, 182, 212, 0.4);
+    font-weight: 500;
+}
+
+.game-price {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #34d399;
+    letter-spacing: 0.02em;
+}
